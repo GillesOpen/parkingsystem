@@ -15,7 +15,6 @@ create table ticket(
  PRICE double,
  IN_TIME DATETIME NOT NULL,
  OUT_TIME DATETIME,
- discount booleen,
  FOREIGN KEY (PARKING_NUMBER)
  REFERENCES parking(PARKING_NUMBER));
 

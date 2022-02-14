@@ -1,61 +1,90 @@
 package com.parkit.parkingsystem.model;
 
-import java.util.Calendar;
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class Ticket {
-    private int id;
-    private ParkingSpot parkingSpot;
-    private String vehicleRegNumber;
-    private double price;
-    private Date inTime;
-    private Date outTime;
+	private int id;
+	private ParkingSpot parkingSpot;
+	private String vehicleRegNumber;
+	// ------------
+	private BigDecimal price;
+	// private double price;
 
-    public int getId() {
-        return id;
-    }
+	public static Date inTime;
+	public static Date outTime;
+	public static boolean discount;
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public ParkingSpot getParkingSpot() {
-        return parkingSpot;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setParkingSpot(ParkingSpot parkingSpot) {
-        this.parkingSpot = parkingSpot;
-    }
+	public ParkingSpot getParkingSpot() {
+		return parkingSpot;
+	}
 
-    public String getVehicleRegNumber() {
-        return vehicleRegNumber;
-    }
+	public void setParkingSpot(ParkingSpot parkingSpot) {
+		this.parkingSpot = parkingSpot;
+	}
 
-    public void setVehicleRegNumber(String vehicleRegNumber) {
-        this.vehicleRegNumber = vehicleRegNumber;
-    }
+	public String getVehicleRegNumber() {
+		return vehicleRegNumber;
+	}
 
-    public double getPrice() {
-        return price;
-    }
+	public void setVehicleRegNumber(String vehicleRegNumber) {
+		this.vehicleRegNumber = vehicleRegNumber;
+	}
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+	public BigDecimal getPrice() {
+		return price;
+	}
 
-    public Date getInTime() {
-        return inTime;
-    }
+	// public double getPrice() {
+	// return price;
+	// }
 
-    public void setInTime(Date inTime) {
-        this.inTime = inTime;
-    }
+	// public void setPrice(Double price) {
+	// this.price = price;
+	// }
 
-    public Date getOutTime() {
-        return outTime;
-    }
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
 
-    public void setOutTime(Date outTime) {
-        this.outTime = outTime;
-    }
+	public static Date getInTime() {
+		return inTime;
+	}
+
+	public void setInTime(Date inTime) {
+		this.inTime = inTime;
+	}
+
+	public static Date getOutTime() {
+		return outTime;
+	}
+
+	public void setOutTime(Date outTime) {
+		this.outTime = outTime;
+	}
+
+	public void setDiscount(Boolean discount) {
+		this.discount = discount;
+	}
+
+	public boolean getDiscount() {
+		// TODO Auto-generated method stub
+		// return true;
+		// System.out.println("discount ticket = -------------------------" + discount);
+		return discount;
+	}
+
+	// public boolean getDiscount() {S
+	// TODO Auto-generated method stub
+	// return discount;
+	// }
+
 }
